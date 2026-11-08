@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>근영여고 1학년 2차고사 시험대비 교재</title>
+<style>
+:root{--ink:#16233f;--line:#d5d9e2;--card:#fff;--ng:#b3261e;--navy:#1b2a4a}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font:16px/1.55 -apple-system,"Apple SD Gothic Neo",sans-serif;background:#eef0f4;color:var(--ink)}
+.bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:9px 12px;background:#fff;border-bottom:1px solid var(--line)}
+.bar b{flex:1;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{font:inherit;font-size:14.5px;padding:7px 13px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink)}
+.btn.pri{background:var(--navy);border-color:var(--navy);color:#fff}
+.wrap{max-width:900px;margin:0 auto;padding:10px 8px 40px}
+.pg{display:block;width:100%;aspect-ratio:210/297;background:#fff;margin:0 0 10px;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+#toc{position:fixed;inset:0;z-index:30;background:#fff;overflow:auto;padding:14px 16px 40px}
+#toc[hidden]{display:none}
+#toc h2{font-size:15px;margin:16px 0 4px;color:var(--navy);border-bottom:1.5px solid var(--navy);padding-bottom:4px}
+#toc a{display:flex;justify-content:space-between;padding:9px 2px;border-bottom:1px solid #eceef2;color:inherit;text-decoration:none;font-size:15px}
+#toc a span{color:#667}
+.lock{max-width:460px;margin:40px auto;padding:20px 18px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.lock h1{font-size:20px;margin:0 0 4px}.lock p{margin:6px 0}.sub{color:#556;font-size:14px}
+.lock input{width:100%;font:inherit;padding:10px 11px;border:1px solid var(--line);border-radius:9px;margin-top:8px}
+#msg{color:var(--ng);font-size:14px;min-height:1.4em;margin:8px 0}
+</style>
+<!--LEESS-GATE2--><script src="/leess/roster.js"></script><script src="/leess/gate.js"></script></head>
+<body>
+<div id="app"></div>
+<script>
+const D = {"title": "근영여고 1학년 2차고사 시험대비 교재", "sub": "시험범위 전체 48지문 · 좌지문 우해석 · 주제·요지·제목 · 핵심 어법·어휘", "salt": "geunyeong1-2026-2-2", "reportUrl": "https://script.google.com/macros/s/AKfycbyKGf4h-cdSKteg8QPTjZTvUVsbowp4S0WvaRuyzjFq4Xwm1nc9mOKl70P0tqKzyOKm/exec", "count": 49, "toc": [], "enc": "FyuguFhbKpPjbkE6z2Sb7M5QpfzaAlSvZh1AVN4/XFrLlHOtNJUaz+OGCzDe9J2/xmO6NECJ0KdlfIj0syILyK731bJ8ClVQkQb0ZmMVVD06SGZo1OPE2DJWJGJuBWhC+xzn6x9Lbejo7xTb3fzAfAw18EB1A6KmPs05LRl06cjTHIopXm5dgXnCWsIgtNgaC2j4FEKE9UgJ8rBIMpRKjJujQ/C9SlJ42mdl5dBmB/1U8y91fbTbzQGBtKO8loYahRE242OgqRsvkO4lIVEcpvkjQNixf6wPvhw6Vf1KlsMHfLs9aJKEW0VaX3rctMZEoZtnzQeEvUCycAiXW8/WeeIyI4k6FYD4LHC7hgGgw2fbOlL0C2lp9RRDSeS/t6etoXxD58B7mjgOYgSjBKuHCL3vConZFgush+4CQroDCOP+9HpgqRWWJIh2XmU7A7ttGlo/TtpHNY+OXGtgosFQhnTzKBR816J3QsYf+oFjRG5t+SD7F6f3n/Y4yOYcITzdUr647Ml3kZKR0IQeT3J5EQ8PRUiz7/uRzfyFPjXof2PHXvV1lxV2dgWD2mKyOzx1dtrD9q+KfXhzz2PpASQf3uOqW8bYQaoXCl3p33RsNgTLg4TLE5+bFWBjcQndzP1jtbx8por5BpNesxVpKwa/2OoqMehNKufQFS/ExoPcJdyqyMk3IjAgSaZ3abzg8BGspg4Fz8xWiCmmCu2PhNxU0+q64NFGwboTctWUoZ2/I38iOOMcxTY4BMDleGosMbSQ6/D3ufPMMLyP/wGo4a4m80tQkQXW9+sq5E5nv9bEI6Tv47CPbZ40BX5bO3yWEhPmP+rtxQ2GzcICPzkchddEjblCRW0vuhxsVvrkHYF5bxmDBsE="};
+/* 콘텐츠 보호(2026-10-06) — 공용 조각(examapp/unlock.js). 빌더(content_crypt.inject)가 각 틀의 UNLOCK 표식 자리에 넣는다.
+   D.enc = base64(iv + AES-256-GCM(gzip JSON)). 열쇠(16진수 64자)는 서버 start 응답 g.key 또는 이 기기에 저장된 값.
+   UNLOCK.run(D, g, st[, target]): {ok:true, key}면 풀린 내용이 target(기본 D)에 합쳐진 뒤, {ok:false, msg}면 msg를 학생에게 보인다.
+   st = {get(), set(v), del()} 열쇠 저장소(엔진마다 localStorage 이름공간이 달라 밖에서 준다). D.enc가 없는 옛 페이지는 그대로 통과.
+   그림: <img data-enc="경로.bin"> 을 UNLOCK.lazy(root, cryptoKey)가 보일 때 받아 풀어 blob 주소로 넣는다(.bin이 아니면 그대로 src).
+   음원(2026-11-02): <audio data-enc="경로.bin" data-type="audio/mp4"> 도 같은 방식(보일 때 받아 풀어 src). */
+const UNLOCK = (() => {
+  const hex2b = h => Uint8Array.from(String(h || '').match(/../g) || [], x => parseInt(x, 16));
+  const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+  async function keyOf(hex) { return crypto.subtle.importKey('raw', hex2b(hex), 'AES-GCM', false, ['decrypt']); }
+  async function openBytes(key, buf) {   // key: CryptoKey, buf: ArrayBuffer|Uint8Array(iv + 본문) → ArrayBuffer
+    const b = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+    return crypto.subtle.decrypt({name: 'AES-GCM', iv: b.slice(0, 12)}, key, b.slice(12));
+  }
+  async function open(keyHex, encB64) {
+    const plain = await openBytes(await keyOf(keyHex), b64(encB64));
+    const s = new Blob([plain]).stream().pipeThrough(new DecompressionStream('gzip'));
+    return JSON.parse(await new Response(s).text());
+  }
+  const MSG_NET = '처음 쓰는 기기는 인터넷 연결이 필요합니다. 통신 상태를 확인한 뒤 다시 시도하세요.';
+  const MSG_SRV = '지금은 시작할 수 없습니다. 선생님께 문의하세요.';
+  const MSG_FAIL = '내용을 여는 데 실패했습니다. 앱을 새로 고친 뒤 다시 시도하세요.';
+  const MSG_OLD = '이 브라우저에서는 열 수 없습니다. 최신 Safari 또는 Chrome으로 여세요.';
+  const able = () => !!(window.isSecureContext && window.crypto && crypto.subtle && typeof DecompressionStream !== 'undefined');
+  async function run(D, g, st, target) {
+    if (!D.enc) return {ok: true};
+    if (!able()) return {ok: false, msg: MSG_OLD};
+    const fresh = g && typeof g.key === 'string' && g.key.length === 64 ? g.key : '';
+    const saved = st.get() || '';
+    const tries = []; if (fresh) tries.push(fresh); if (saved && saved !== fresh) tries.push(saved);
+    if (!tries.length) return {ok: false, msg: g && g.nokey ? MSG_SRV : MSG_NET};
+    for (const k of tries) {
+      try { const obj = await open(k, D.enc); Object.assign(target || D, obj); D.enc = ''; st.set(k); return {ok: true, key: k}; }
+      catch (e) { if (k === saved) st.del(); }
+    }
+    return {ok: false, msg: MSG_FAIL};
+  }
+  const urls = new Map();   // 경로 → blob 주소(한 번 푼 그림은 다시 받지 않는다)
+  async function imgUrl(key, path, type) {
+    if (!key || !/\.bin$/.test(path)) return path;
+    if (urls.has(path)) return urls.get(path);
+    const p = (async () => {
+      const r = await fetch(path); if (!r.ok) throw new Error('http ' + r.status);
+      const buf = await openBytes(key, await r.arrayBuffer());
+      return URL.createObjectURL(new Blob([buf], {type: type || 'image/webp'}));
+    })();
+    urls.set(path, p);
+    try { const u = await p; urls.set(path, u); return u; } catch (e) { urls.delete(path); throw e; }
+  }
+  let io = null; const pend = new WeakMap();
+  function lazy(root, key) {   // root 안의 img[data-enc]·audio[data-enc]를 화면에 보일 때 받아 넣는다
+    const load = el => { if (el.dataset.done) return; el.dataset.done = '1'; const au = el.tagName === 'AUDIO';
+      imgUrl(key, el.dataset.enc, el.dataset.type || (au ? 'audio/mp4' : '')).then(u => { el.src = u; })
+        .catch(() => { if (au) el.insertAdjacentHTML('afterend', '<div class="muted">음원을 받지 못했습니다. 통신 상태를 확인하세요.</div>'); else el.alt = '그림을 받지 못했습니다'; }); };
+    if (!('IntersectionObserver' in window)) { root.querySelectorAll('img[data-enc], audio[data-enc]').forEach(load); return; }
+    if (!io) io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { io.unobserve(e.target); (pend.get(e.target) || load)(e.target); } }), {rootMargin: '600px 0px'});
+    root.querySelectorAll('img[data-enc], audio[data-enc]').forEach(img => { pend.set(img, load); io.observe(img); });
+  }
+  const SIGN_FIELDS = ['name', 'device', 'score', 'correct', 'total', 'pass', 'time'];
+  const canon = b => SIGN_FIELDS.map(k => b[k] === undefined || b[k] === null ? '' : String(b[k])).join('|');
+  async function signBody(keyHex, body) {   // 기록 서명(2026-10-08): 채점 기록을 앱 열쇠로 HMAC-SHA256 → 서버가 검증, 위조 기록·가짜 합격 문자 차단
+    const k = await crypto.subtle.importKey('raw', hex2b(keyHex), {name: 'HMAC', hash: 'SHA-256'}, false, ['sign']);
+    const sig = await crypto.subtle.sign('HMAC', k, new TextEncoder().encode(canon(body)));
+    return Array.from(new Uint8Array(sig), x => x.toString(16).padStart(2, '0')).join('');
+  }
+  return {run, open, openBytes, keyOf, hex2b, able, imgUrl, lazy, signBody, canon};
+})();
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const NS = 'ex:' + D.salt + ':';
+const exst = {
+  get(k, d) { try { const v = localStorage.getItem(NS + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(NS + k, JSON.stringify(v)); return true; } catch (e) { return false; } }
+};
+const KEYST = {get: () => exst.get('k', ''), set: v => exst.set('k', v), del: () => exst.set('k', '')};
+const pad = n => String(n).padStart(2, '0');
+const fmtTime = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+const cleanName = s => s.replace(/\s+/g, ' ').trim();
+const DEVICE = (() => { let d = exst.get('device', ''); if (!d) { d = (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random()).slice(0, 8); exst.set('device', d); } return d; })();
+async function gate(name, range) {     // 시험 앱과 같은 시작 판정(이름·기기ID 짝) + 열쇠
+  if (!D.reportUrl) return {allow: true};
+  for (let i = 0; i < 2; i++) {
+    if (i) { const m = document.getElementById('msg'); if (m) m.textContent = '서버 응답이 늦어 한 번 더 확인하는 중…'; }
+    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 60000);
+    try {
+      const r = await fetch(D.reportUrl, {method: 'POST', signal: ctl.signal, headers: {'Content-Type': 'text/plain;charset=utf-8'},
+        body: JSON.stringify({event: 'start', name, range, device: DEVICE, app: D.title, salt: D.enc ? D.salt : undefined, time: fmtTime(new Date()), ua: navigator.userAgent.slice(0, 120)})});
+      const txt = await r.text();
+      try { const j = JSON.parse(txt); return typeof j.allow === 'boolean' ? j : {allow: true}; } catch (e) { return {allow: true, legacy: true}; }
+    } catch (e) { if (i) return {allow: false, offline: true}; await new Promise(res => setTimeout(res, 1500)); }
+    finally { clearTimeout(t); }
+  }
+}
+function nameOk() {
+  const name = cleanName($('#name').value);
+  if (!name) { $('#msg').textContent = '이름을 먼저 입력하세요.'; $('#name').focus(); window.scrollTo(0, 0); return false; }
+  if (window.LEESS && !LEESS.ok(name)) { $('#msg').textContent = LEESS.msg(); $('#name').focus(); window.scrollTo(0, 0); return false; } /*LEESS*/
+  exst.set('name', name); $('#msg').textContent = ''; return true;
+}
+function renderLocked() {
+  let saved = exst.get('name', ''); try { saved = saved || localStorage.getItem('leess-vname') || ''; } catch (e) {}
+  $('#app').innerHTML = `<div class="lock"><h1>${esc(D.title)}</h1><p class="sub">${esc(D.sub)}</p>
+  <p>본인 이름(실명)을 쓰고 「교재 열기」를 누르세요. 처음 쓰는 기기는 인터넷 연결이 필요합니다.</p>
+  <input type="text" id="name" placeholder="이름 (필수)" autocomplete="off" value="${esc(saved)}">
+  <p id="msg"></p><button class="btn pri" id="openB" style="width:100%;padding:11px">교재 열기</button></div>`;
+  $('#openB').onclick = openBook;
+}
+async function openBook() {
+  if (!nameOk()) return;
+  $('#msg').textContent = '서버에서 이름·기기를 확인하는 중…'; $('#openB').disabled = true;
+  const g = await gate(exst.get('name', ''), '시험대비 교재');
+  $('#openB').disabled = false;
+  if (!g.allow) { $('#msg').textContent = g.offline ? '서버에 연결하지 못했습니다. 통신 상태를 확인한 뒤 다시 시도하세요.' : (g.msg || '이 기기에서는 시작할 수 없습니다. 선생님께 문의하세요.'); return; }
+  const u = await UNLOCK.run(D, g, KEYST);
+  if (!u.ok) { $('#msg').textContent = u.msg; return; }
+  show(u.key);
+}
+async function show(hex) {
+  const key = await UNLOCK.keyOf(hex || KEYST.get());
+  let imgs = '', toc = '', last = '';
+  for (let i = 1; i <= D.count; i++) imgs += `<img class="pg" id="p${i}" alt="${i}쪽" data-enc="guide/p${pad(i)}.bin">`;
+  for (const [part, label, n] of D.toc) { if (part !== last) { toc += `<h2>${esc(part)}</h2>`; last = part; } toc += `<a href="#" data-p="${n}">${esc(label)}<span>${n}쪽</span></a>`; }
+  $('#app').innerHTML = `<div class="bar"><b>${esc(D.title)}</b><button class="btn" id="tocB">목차</button></div><div class="wrap">${imgs}</div>
+  <div id="toc" hidden><div style="display:flex;justify-content:space-between;align-items:center"><b>목차</b><button class="btn" id="tocX">닫기</button></div>${toc}</div>`;
+  UNLOCK.lazy($('#app'), key);
+  const T = $('#toc');
+  $('#tocB').onclick = () => { T.hidden = false; }; $('#tocX').onclick = () => { T.hidden = true; };
+  T.onclick = e => { const a = e.target.closest('a[data-p]'); if (!a) return; e.preventDefault(); T.hidden = true; const y = $('#p' + a.dataset.p).getBoundingClientRect().top + scrollY - 56; window.scrollTo(0, y); };
+}
+async function boot() {
+  if (D.enc && KEYST.get()) { const u = await UNLOCK.run(D, null, KEYST); if (u.ok) { show(u.key); return; } }
+  renderLocked();
+}
+boot();
+</script>
+<!--hubback-->
+<script>/* 통합앱에서 열었을 때만 맨 위에 「‹ 전체 앱」(hubback.py) */
+(function () {
+  var u; try { u = sessionStorage.getItem('hub:back'); } catch (e) {}
+  if (!u || u.indexOf(location.origin + '/') !== 0) return;
+  var box = document.createElement('div'), a = document.createElement('a');
+  box.setAttribute('style', 'max-width:780px;margin:0 auto;padding:10px 16px 0');
+  a.id = 'hubBack'; a.href = u; a.textContent = '‹ 전체 앱';
+  a.setAttribute('style', 'display:inline-block;padding:6px 14px 6px 10px;border:1px solid var(--line,#e1e0da);border-radius:999px;background:var(--card,#fff);color:var(--acc,#2f5bd3);font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;text-decoration:none');
+  a.onclick = function (e) {
+    var t = document.getElementById('test'), h = document.getElementById('home');   // 시험 화면이 있는 앱은 그것으로, 없으면 첫 화면이 보이는지로
+    var idle = t ? (t.hidden || t.offsetParent === null) : (!!h && !h.hidden && h.offsetParent !== null);
+    if (!idle && !confirm('전체 앱 목록으로 돌아갈까요?\n지금 푸는 문제는 이어서 풀 수 없을 수도 있습니다.')) e.preventDefault();
+  };
+  box.appendChild(a);
+  document.body.insertBefore(box, document.body.firstChild);
+  // 선생님 앱(leess-teacher)에서 왔으면 선생님 화면을 바로 연다(코드는 선생님 앱이 이 앱의 코드 자리에 넣어 두었다). 한 번만.
+  var tf; try { tf = sessionStorage.getItem('hub:teacher'); sessionStorage.removeItem('hub:teacher'); } catch (e) {}
+  var tb = document.getElementById('teacherBtn');
+  if (tf === '1' && tb && !tb.hidden) tb.click();
+})();
+</script>
+</body>
+</html>
